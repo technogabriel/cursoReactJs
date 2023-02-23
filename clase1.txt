@@ -1,0 +1,28 @@
+*Tipos de datos:
+String
+number=> NaN(tipo de dato dentro de numero)
+boolean 
+object => array 
+null
+undefined
+simbol
+
+*recorrer array:
+forEach => array
+map => array
+filter => array | []
+find => elemento del array() | undefind
+reduce => valor
+every => boolean
+some => boolean
+indexOf | undefind
+
+maneras de acceder a un objeto:
+ejem const player//
+
+-> player.deporte
+-> player['deporte']
+-> destructuracion => const {apellido,nombre,deporte, campeon_mundial} =player
+
+
+
