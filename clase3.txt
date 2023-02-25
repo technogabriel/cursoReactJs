@@ -1,0 +1,24 @@
+Para crear proyecto react:
+npx-create-react-app-nombreApp
+
+para agregar los componentes se usa el import:
+import Productos from './views/Productos';
+
+En react hay que cerrar todas las etiquetas si o si(los componentes que no tienen cierre)
+
+reemplazar los class por className(en todos los componentes)
+
+Componentes siempre primera letra en Mayuscula(como si fuesen clases)
+
+un componente solo puede retornar un solo elemento html
+react fragment (etiquetas vacias) para solucionar lo de retornar un solo elemento <> </>
+
+al atributo se le llama props por convesion, por ejem:
+const Navbar = (props) => {
+
+**Los nombres que se les de a los props deben ser iguales a donde se llamen desde el componente(ejemplos en el App.js, Navbar.jsx y Productos.jsx)
+
+operadores ternarios:
+{show_dropdown && <DropDownNavbar list_arr={dropdown_list} dropName={dropdown_name}/>}
+{search_bar && <SearchBar/>}
+{list_arr?.length>0 && list_arr.map
