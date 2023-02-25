@@ -1,0 +1,47 @@
+Tecnologias:
+Angular = framework
+VueJs =libreria
+React = libreria
+
+REACT:
+libreria para crear interfaces de usuario. es un Open-Source(literal -uso publico) creado y mantenido por FB-Meta.
+caracteristicas:
+*declarativo = especificar que contiene la interfaz.
+
+*basado en componentes = todo es un componente. es una pieza de interfaz reutilizable.Puedes crear tus propias etiquetas.
+
+*Independecias de plataforma = puede ser utilizado para el renderizado del lado del servidor con Next, para la generacion de sitios estaticos con Gatsby o para el desarrollo de app moviles con React native
+
+*virtual Dom(VD) = copia del DOM. existe dentro de la memoria de react.Es capaz de reconocer zonas de impacto y realizar actualizaciones parciales.Objeto que representa el estado deseado de la interfaz.
+
+*zona de impacto = donde se realiza el cambio en el VD. se divide en 2:
+individual y multiple.
+
+*arbol fiber(? 
+
+*proceso re render = se pinta el componente con un nuevo componente. sucede a nivel de componente.
+
+*DOM diffing = reemplazo a nivel global
+
+JSX:
+lenguaje de desarrollo propio denominado JSX. Es usado unicamente en tiempo de desarrollo ya que al construir la app, todo codigo JSX es traducido en codigo Js procesable por el navegador mediante Babel y Webpack.
+ejem:
+JSX es un lengaje parecido a HTML en javascript, esto es, la posibilidad de escribir componentes React dentro de Js como etiquetas HTML. Podemos usar entonces todos los atrib de html sumandoles las caracteristicas propias de React(y la posibilidad de crear tambien nuestras propias etiquetas)
+function Componente(props){
+  return (<div>
+	    Hola mundo
+	  </div>
+)
+
+}
+sin embargo el navegador no puede procesar JSX. Es por eso que Babel se encargarà de convertir cada etiqueta JSX en llamados a la funcion createElement de la libreria React:
+function Componente(props){
+  return React.createElement('div',{},'Hola mundo');
+}
+
+Para crear un proyecto react:
+npx create-react-app nombreProyecto(nombre del proyecto no puede ir en mayusculas)
+Para entrar al VSC desde la consola:
+cd nombreProyectoReact -> code . y se abre el ide
+
+
