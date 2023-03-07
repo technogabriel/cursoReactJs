@@ -1,10 +1,14 @@
 import './App.css';
+import Counter from './components/Counter/Counter';
 import Productos from './views/Productos';
 
 function App() {
  
   return (
-    <Productos/>
+    <div className="App text-danger">
+      <Productos/>
+      {/*<Counter/>*/}
+    </div>
   );
 }
 

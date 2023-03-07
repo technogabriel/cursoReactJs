@@ -1,0 +1,19 @@
+*Componentes:
+A traves de props a parte de reutilizar codigo, puedo influir en el comportamiento de un componente!
+
+*componentes dinamicos que no tienen logica = stateless
+
+componentes que pueden heredar, por ejem:
+<Container>
+ <ProductContainer/>
+
+Hooks:
+funciones preparadas para ser utilizadas. Uno de los hooks, es el estado. Puede mantener adentro suyo su informacion que tambien es dinamico.
+para agregar : {useState}.
+todos los hooks que vienen de react utilizan useState
+Los estados pertenecen a un componente y sirven para almacenar su valor
+ const [contador,setContador] = useState(0);
+
+
+
+
