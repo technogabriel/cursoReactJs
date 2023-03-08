@@ -1,0 +1,26 @@
+CICLO DE VIDA:
+cuando el componente se carga y esta listo se llama mounting(?
+etapas:
+mount
+Change
+Dismount
+
+Los componentes son autonomos porque tienen(pasos) "props", "state" y "lifeCycle"
+
+todos los hooks arrancan con la palabra "use"(por ejemplo : useEffect)
+
+useEffectSnippet(vuelve toda la funcion):
+useEffect(() => {
+    //cuando el componente esta listo(Mount)
+    
+    return () => {
+      //Cuando el componente se destruye (Dismount)
+     
+    }
+    //en los corchetes, es el (change), los cambios
+  }, [])
+
+Se pueden usar multiples useEffect**
+
+EVENTOS:
+click /submit/change

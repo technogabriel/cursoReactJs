@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import Cart from './Cart/Cart';
 
 
@@ -40,9 +40,28 @@ const ProductContainer = () => {
       lugar:'Argentina'
     }
   ]
+
+  const [datos,setDatos ]= useState(equipos)
+  const [click,setClick] =useState(false)
+
+  useEffect(() => {
+    //cuando el componente esta listo(Mount)
+    
+    console.log('se cargo completamente el componente')
+  
+    return () => {  
+      //Cuando el componente se destruye (Dismount)
+      console.log('se destruyo el componente')
+    }
+    //en los corchetes, es el (change), los cambios
+  }, [click, datos])
+
+  console.log('Se ejecuto este console.log pero el html no cargo')
+  
+
     return (
            <>
-            {equipos.map(({id,img,titulo,descripcion,lugar})=>(
+            {datos.map(({id,img,titulo,descripcion,lugar})=>(
               <Cart key={id} 
                     img={img} 
                     title={titulo}
@@ -52,6 +71,7 @@ const ProductContainer = () => {
                     buttonClassName={titulo === 'Real Madrid' ? 'btn btn-outline-success' : 'btn btn-outline-danger'}
               />
             ))}
+           {/* <button onClick={()=> setClick(!click)}>click</button>*/}
            </>
 
     );
