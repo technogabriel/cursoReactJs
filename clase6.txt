@@ -1,0 +1,55 @@
+para cambiar objetos en Js:
+desestructuración
+let x={
+   key: value
+ }
+formas:
+x.name = / x['value']= / let {name} = objeto
+
+para poder cambiar se tiene que usar la funcion para cambiar el estado(viene dado por el useState):
+const [value, setValue] = useState({})
+
+********************************
+RENDERIZACION:
+renderizado condicional (map, filter, reduce)
+Listas y keys
+Formularios
+levantando el estado (uplifting)
+
+condicional:
+funciona de la misma forma que los condicionales en Js. Sirve para que el interprete ejecute o no dterminadas partes del codigo depdendiendo del valor de verdad.
+en React se condiciona el renderizado de componentes; mientras que en Js condicionamos lineas, en React condicionamos renderizado de componentes en la pantalla
+No debe ser const ya que su valor cambiara luego.
+Dentro del if cambie el valor a la variable por cualquier elemento JSX.
+recordar que cada etiqueta JSX sera procesada luego como llamadas a React.CreateElement, por lo que pueden usarse como valores de variables
+
+**Renderizado condicional con operador &&:
+el proceso en si mismo consta de un solo paso. Si esa expresion es verdadera, entonces el lenguaje evalua luego la expresion del lado derecho
+
+para retornar dos cosas a la vez se necesita un fragment(<> </>)
+ejem(Formulario.jsx):
+{condicional && <div>Aca el condicional llego true </div>}
+
+
+**Renderizado de listas:
+consiste en reutilizar un componente y usarlo para renderizar varias instancias de ese mismo componente pero con varios datos. Una caracteristica ppal es que lo slementos JSX se generan de forma dinamica en Js, por lo que React necesita que se asigne una key. el valor de key debe ser unico en toda la lista(como map en java).
+
+pasos:
+obtener array / convertir el array en elemento JSX(map o puede servir filter para filtrar elemento) / no olvidar añadir al elemento de mas alto nivel la key / mostrar en el render del componente.
+ejem(Navbar.jsx):
+nombreItems?.map((nombre, index)=>(
+          <NavbarItem key={index} nombreItem={nombre}/>
+        ))}
+***Se le agrega el index al map y se agrega al componente como key
+
+
+
+
+
+
+
+
+
+
+   
+
