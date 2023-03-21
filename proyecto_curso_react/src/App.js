@@ -1,27 +1,62 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './App.css';
-import Counter from './components/Counter/Counter';
+import { datosLogin, datosLoginInput, datosRegistro, datosRegistroInput } from './components/Formulario/config';
 import Formulario from './components/Formulario/Formulario';
 import Navbar from './components/Navbar/Navbar';
-import Productos from './views/Productos';
+//import Productos from './views/Productos';
 
 function App() {
 
   const [showForms, setShowForm] = useState(false)
+
+  const [showLogin,setShowLogin]= useState(false)
+
+  
+
+  const handleSubmit=(e, data)=>{
+    e.preventDefault();
+    console.log(data)
+  }
+
  
+  //Uplifting:
+  const[enviado,setEnviado]= useState(false);
+  const toggleEnviado=()=> setEnviado(!enviado)
+
+  useEffect(() => {
+    if(enviado){
+      alert('Se enviaron los datos correctamente!')
+      setEnviado(false)
+    }
+  }, [enviado]);
+
+
+  
   return (
     <div className="App text-danger">
       <Navbar nombreItems ={["Home","Link","Disabled"]}/>
      {/* <Productos/>*/}
-      {/*<Counter/>*/}
 
       <button onClick={()=>setShowForm(!showForms)}>{showForms ? 'Ocultar' : 'Mostrar'}</button>
-      {showForms &&
+
+      <Formulario 
+        onSubmit={handleSubmit} 
+        formTitle={!showLogin? 'Register' : 'Login'} 
+        initialState={!showLogin ? datosRegistro : datosLogin} 
+        inputs = {!showLogin ? datosRegistroInput : datosLoginInput}
+        toggleEnviado={toggleEnviado}
+        />
+      {/*<Formulario initialState={datosRegistro}/>*/}
+      {/*showForms &&
       <>
       <Formulario/>
       <Formulario condicional = {true}/>
       </>
-    }
+  */}
+
+  <button onClick={()=>setShowLogin(!showLogin)}>
+    {!showLogin? 'Ir a login' : 'Ir a registro'}
+  </button>
 
     </div>
   );
