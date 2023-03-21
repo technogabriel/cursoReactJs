@@ -1,0 +1,9 @@
+se puede crear un archivo aparter(js) con toda la data de los inputs con el export en c/u y luego importarlos en el componente. por ejem(App.js):
+import { datosLogin, datosLoginInput, datosRegistro, datosRegistroInput } from './components/Formulario/config';
+
+forzar el re-render para modificar correctamente el formulario cuando cambio de tipo(register -> login).
+
+uplifting:
+Levantar o cambiar un estado de un componente. Es como "copiar las cosas" a otro componente.
+
+ejemplo de uplifting en App.js y en Formulario.jsx -> const [enviado,setEnviado] y const [text, setText]

@@ -23,6 +23,10 @@ function App() {
   const[enviado,setEnviado]= useState(false);
   const toggleEnviado=()=> setEnviado(!enviado)
 
+  const [text, setText] = useState('')
+  const handleSetText  = (text) => setText(text)
+
+
   useEffect(() => {
     if(enviado){
       alert('Se enviaron los datos correctamente!')
@@ -34,6 +38,7 @@ function App() {
   
   return (
     <div className="App text-danger">
+      <h1>{text || 'Aca va un texto que sera tipiado desde Form'}</h1>
       <Navbar nombreItems ={["Home","Link","Disabled"]}/>
      {/* <Productos/>*/}
 
@@ -45,6 +50,7 @@ function App() {
         initialState={!showLogin ? datosRegistro : datosLogin} 
         inputs = {!showLogin ? datosRegistroInput : datosLoginInput}
         toggleEnviado={toggleEnviado}
+        handleSetText={handleSetText}
         />
       {/*<Formulario initialState={datosRegistro}/>*/}
       {/*showForms &&

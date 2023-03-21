@@ -4,7 +4,7 @@ import Input from '../../shared/Input'
 const Formulario = (props) => {
     //validacion
     //no es dinamico
-    const {initialState, inputs,formTitle, onSubmit,toggleEnviado} = props
+    const {initialState, inputs,formTitle, onSubmit,toggleEnviado, handleSetText} = props
     const [form, setForm ] = useState(initialState)
 
     const handleChange=(e)=>{
@@ -30,6 +30,7 @@ const Formulario = (props) => {
 
   return (
     <div>
+        <input type="text" onChange={(e) => handleSetText(e.target.value)} />
         <form onSubmit={handleSubmit}>
             <h1>{formTitle || 'Titulo'}</h1>
             {/*Inputs*/}
