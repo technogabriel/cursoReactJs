@@ -18,8 +18,8 @@ const Navbar = (props) => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        {nombreItems?.map((nombre, index)=>(
-          <NavbarItem key={index} nombreItem={nombre}/>
+        {nombreItems?.map(({nombre, path}, index)=>(
+          <NavbarItem key={index} nombreItem={nombre} path={path}/>
         ))}
      {show_dropdown && <DropDownNavbar list_arr={dropdown_list} dropName={dropdown_name}/>}
       </ul>

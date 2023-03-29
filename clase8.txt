@@ -1,0 +1,27 @@
+React Router:
+dependencia que se utiliza en react y no viene por defecto. Cuando se crea una app con react jsx se crea solo con componentes basicos y/o necesarios.
+Se tiene que instalar esta dependencia, para ello:
+npm install react-router-dom
+
+**en el proyecto, para importar el router:
+imbr => import { BrowserRouter as Router } from 'react-router-dom'(importar manual import { BrowserRouter,Routes, Route } from 'react-router-dom')
+
+**Para trabajar con react router:
+BrowserRouter
+Routes
+Route(donde van todos los paths)
+Navlink
+Link(no tiene capacidad para cambiar estilos - no sirve para el navbar)
+<BrowserRouter>
+  <Routes>
+	<Route1>
+	<Route2>
+	<RouteN>
+  </Routes>
+</BrowserRouter>
+
+
+para poder abrir una nueva vista, con un link(no NavLink) se puede usar, por ejemplo:
+//Link tambien se importa de 'react-router-dom'
+<Link to={`/detail/${id}`} className='btn btn-info'>Ir al detalle</Link>
+
