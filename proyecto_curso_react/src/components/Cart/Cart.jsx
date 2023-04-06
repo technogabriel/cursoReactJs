@@ -1,11 +1,13 @@
 import React from 'react'
 import defaultImage from '../../assets/logo192.png'
 import Button from '../../shared/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cart = (props) => {
-
   const {img, title, description, buttonName, buttonClassName,id} = props;
+  const navigate = useNavigate()
+
+
   const handleClick = () => alert('se clickeo');
   
   return (
@@ -15,7 +17,8 @@ const Cart = (props) => {
       <h5 className="card-title">{title || 'default title'}</h5>
       <p className="card-text">{description || 'Lorem ipsu'}</p>
       <Button className = {buttonClassName} buttonText = {buttonName}  onClick={handleClick}></Button>
-      <Link to={`/detail/${id}`} className='btn btn-info'>Ir al detalle</Link>
+      <Button className = {buttonClassName} buttonText = {'ir al detalle'}  onClick={()=>navigate(`/detail/${id}`)}></Button>
+      {/*<Link to={`/detail/${id}`} className='btn btn-info'>Ir al detalle</Link>*/}
       {/*<button className={buttonClassName || "btn btn-primary"}>{buttonName || 'Ver mas'}</button>*/}
     </div>
   </div>

@@ -1,0 +1,32 @@
+usesParam:
+Ayuda a utilizar los parametros que se pasen.
+Ejem de useParam:
+const {id} = useParams()
+
+  const teams = equipos.find((item)=> item.id ===id)
+  if(teams){
+  return (
+    <CartDetail 
+    img={teams.img}
+    nombre={teams.titulo}
+    />
+  )
+}
+
+
+**UseSearchParams:
+busca por la 'q'=> es como un valor de una key
+
+
+**HOOKS:
+useNavigate es indistinto al link y pueden convivir los dos
+const navigate = useNavigate()
+
+const handleRedirection =()=>{
+    navigate(`detail/${id}`)
+  }
+<Button className = {buttonClassName} buttonText = {'ir al detalle'}  onClick={handleRedirection}></Button>
+ò:
+<Button className = {buttonClassName} buttonText = {'ir al detalle'}  onClick={()=>navigate(`/detail/${id}`)}></Button>
+Navigate = sirve para redireccionar en caso que no exista componente
+

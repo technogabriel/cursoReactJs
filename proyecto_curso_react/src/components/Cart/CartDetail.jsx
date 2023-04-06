@@ -1,13 +1,17 @@
 import React from 'react'
+import { Navigate, useNavigate } from 'react-router-dom'
 
-const CartDetail = () => {
+const CartDetail = (props) => {
+  const {img, nombre}= props
+  const navigate = useNavigate()
   return (
     <div>
+      <button className='btn btn-danger' onClick={()=>navigate(-1)}>Volver atras</button>
         <div>
-            <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIx9w05CjeDGLFPJmEmEZOcQ_xHZhZvWkVswM8-bCq7vof9PtLjSoXgKRgyKj6Ynenh7Q&usqp=CAU'} alt="" />
+            <img src={img} alt="" />
         </div>
         <div>
-            <h1>Team's Name</h1>
+            <h1>{nombre}</h1>
         </div>
     </div>
   )
