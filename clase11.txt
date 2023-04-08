@@ -1,0 +1,4 @@
+CONTEXT:
+createContext = crea el contexto
+useContext = usar el contexto
+
