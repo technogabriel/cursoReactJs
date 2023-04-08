@@ -35,7 +35,7 @@ const ProductContainer = () => {
                     description={descripcion}
                     lugar={lugar}
                     buttonName={'Mas Info'}
-                    buttonClassName={titulo === 'Real Madrid' ? 'btn btn-outline-success' : 'btn btn-outline-danger'}
+                    buttonClassName={'btn btn-outline-success' }
               />
             ))}
            {/* <button onClick={()=> setClick(!click)}>click</button>*/}

@@ -10,7 +10,6 @@ const DetailPage = () => {
   const [loading,setLoading] = useState(false)
   const [equipo, setEquipo] = useState(null)
   const [searchParam, setSearchParam] = useSearchParams()
-  console.log(searchParam.get('q'))
   const {id} = useParams()
 
   const findEquipo=()=>{

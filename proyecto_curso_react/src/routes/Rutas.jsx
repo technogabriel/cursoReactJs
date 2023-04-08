@@ -6,6 +6,7 @@ import DetailPage from '../pages/DetailPage'
 import Home from '../pages/Home'
 import Nosotros from '../pages/Nosotros'
 import UrlGenerator from '../components/URLGenerator/UrlGenerator'
+import MainLayoutRoutes from './layout/MainLayoutRoutes'
 
 
 const Rutas = () => {
@@ -13,15 +14,18 @@ const Rutas = () => {
   return (
     <BrowserRouter>
     {/*<Navbar nombreItems={["Home","Link","Disabled"]} />*/}
-    <Navbar nombreItems={[{nombre:'Home',path:'/'},{nombre:'nosotros', path:'/nosotros'},{nombre:'contacto', path:'/contacto'}]} />
+    {/*<Navbar nombreItems={[{nombre:'Home',path:'/'},{nombre:'nosotros', path:'/nosotros'},{nombre:'contacto', path:'/contacto'}]} />*/}
     <Routes>
       {/* Elemento UrlGenerator de ejemplo para la captura y filtrado de dato(?
     <Route path='/' element={<UrlGenerator/>}/>
     */}
-        <Route path='/' element={<Home/>}/>
-        <Route path='/nosotros' element={<Nosotros/>}/>
-        <Route path='/contacto' element={<Contacto/>}/>
-        <Route path='/detail/:id' element={<DetailPage/>}/>
+
+        <Route path='/' element={<MainLayoutRoutes user={true}/>}>
+          <Route index element={<Home/>}/>
+          <Route path='nosotros' element={<Nosotros/>}/>
+          <Route path='contacto' element={<Contacto/>}/>
+          <Route path='detail/:id' element={<DetailPage/>}/>
+        </Route>
         
     </Routes>
     

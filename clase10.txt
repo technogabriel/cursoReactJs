@@ -1,0 +1,7 @@
+REACT-ROUTER complemento / Composicion de componentes
+
+Para componentes se coloca children, para las rutas se coloca Outlet
+
+nested round = rutas dentro de las rutas => Hilo dentro de otro Hilo => rutas anidadas
+
+layout = diseño de la vista
