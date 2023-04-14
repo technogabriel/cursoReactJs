@@ -1,10 +1,10 @@
 import React, { createContext, useState } from 'react'
+import useCart from '../hooks/useCart'
 
 export const EcommerContext = createContext('')
 
 const EcommerceProvider = ({children}) => {
-
-   const [carrito, setCarrito] =useState([])
+    const {carrito, addToCart,deleteCart,isCart} = useCart()
 
 const products =[{
     id:"1",
@@ -40,13 +40,15 @@ const products =[{
 }
 ]
 
-const addToCart = (producto)=> setCarrito([...carrito, producto])
+
     
   return (
     <EcommerContext.Provider value={{
         products,
         addToCart,
-        carrito
+        carrito,
+        deleteCart,
+        isCart
     }}>
         {children}
     </EcommerContext.Provider>

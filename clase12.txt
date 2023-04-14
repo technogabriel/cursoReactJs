@@ -1,0 +1,9 @@
+para convertir el string a un numero se usa Number(id)
+HOOKS:
+mientra menos logica tengo un componente, mejor es...
+se pueden construir nuestros propios hooks. Cuando se quiere compartir logica entre dos funciones, se extrae en una 3era.
+
+includes = Determines whether an array includes a certain element, returning true or false as appropriate.
+
+ejemplos de hooks:
+useCart / useCounter
