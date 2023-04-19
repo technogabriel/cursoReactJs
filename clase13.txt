@@ -1,0 +1,28 @@
+http - promises :
+API REST:
+method = get/ post / put /patch / delete
+url = dominio/api/users
+Body, Headers, URL PARAMS
+***************************************************************
+GET= obtener
+POST=almacenar
+PUT=enviar y actualizar por completo
+PATCH= enviar y actualizar parcialmente
+DELETE = enviar y eliminar
+**************************************************************
+para peticiones se està usando axios(npm i axios)
+ejemplo de axios:
+
+const getPostAxios = async (id) =>{
+      try {
+        const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+        
+      }
+
+    }
+
+
+
