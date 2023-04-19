@@ -1,0 +1,26 @@
+{
+    "productos":[{
+        "id":1,
+        "name":"zapatilla",
+        "marca":"Nike",
+        "modelo":"Air Jordan",
+        "precio":12000
+    },
+    {
+        "id":2,
+        "name":"zapatilla",
+        "marca":"Adidas",
+        "modelo":"Classic",
+        "precio":13500  
+    }
+],
+"favoritos":[
+    {
+        "id":1,
+        "name":"zapatilla",
+        "marca":"Nike",
+        "modelo":"Air Jordan",
+        "precio":12000
+    }
+]
+}
