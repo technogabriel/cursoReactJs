@@ -1,0 +1,8 @@
+Peticiones v2:
+json-server es un backend facke que se levanta cuando se levanta el proyecto
+**si quiero otro puerto json-server --watch --port .....
+en el package.json se puede agregar el server, como:
+"server":"json-server --watch --port 3131 backend/db.json"
+
+react icons:
+npm install react-icons --save
