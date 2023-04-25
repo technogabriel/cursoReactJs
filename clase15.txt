@@ -1,0 +1,5 @@
+Outlet es para hacer referencia a otras rutas
+
+icons:
+import { AiOutlineHeart, AiFillHeart, AiFillDelete } from 'react-icons/ai'
+

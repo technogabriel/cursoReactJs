@@ -8,8 +8,8 @@ export const productContext = createContext('')
 const ProductProvider = ({children}) => {
 
   const {loading } = UseLayout()
-  const {productos,getAllProducts} = useProducts()
-  const {favoritos, getAllFavorites} = UseFavorite()
+  const {productos,getAllProducts,saveProduct} = useProducts()
+  const {favoritos, getAllFavorites, isInFavorites, addFavoritos,removeFavoritos} = UseFavorite()
 
   return (
     <productContext.Provider value={{
@@ -17,7 +17,11 @@ const ProductProvider = ({children}) => {
       productos,
       favoritos,
       getAllFavorites,
-      getAllProducts
+      getAllProducts,
+      isInFavorites,
+      addFavoritos,
+      removeFavoritos,
+      saveProduct
       }}>
       {children}
     </productContext.Provider>
