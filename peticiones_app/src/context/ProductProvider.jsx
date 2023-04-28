@@ -8,7 +8,9 @@ export const productContext = createContext('')
 const ProductProvider = ({children}) => {
 
   const {loading } = UseLayout()
-  const {productos,getAllProducts,saveProduct} = useProducts()
+  const {productos,getAllProducts,saveProduct, edit,editProduct, editProductFields,handleEditProductFields,
+    handleResetEditProductFields} = useProducts()
+
   const {favoritos, getAllFavorites, isInFavorites, addFavoritos,removeFavoritos} = UseFavorite()
 
   return (
@@ -16,12 +18,17 @@ const ProductProvider = ({children}) => {
       loading,
       productos,
       favoritos,
+      edit,
+      editProductFields,
       getAllFavorites,
       getAllProducts,
       isInFavorites,
       addFavoritos,
       removeFavoritos,
-      saveProduct
+      saveProduct,
+      editProduct,
+      handleEditProductFields,
+      handleResetEditProductFields
       }}>
       {children}
     </productContext.Provider>

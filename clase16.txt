@@ -1,0 +1,52 @@
+Material-ui para react:
+https://mui.com/material-ui/getting-started/overview/
+
+REDUX:
+types / actions / reducers
+redux es inmutable; todos los estados que se pueden tener son objetos. La manipulacion de datos viene de objetos. cuando se habla de redux es objeto dentro de objeto...
+otro hook de reduc son selector, dispatcher
+
+state, reducer:
+let objeto={
+  editar: false,
+  editarProductosField:{}
+  productos:[]
+}
+
+types:
+const types ={
+ EDITAR_ON:"EDITAR_ON",
+ EDITAR_OFF: "EDITAR_OFF"
+}
+
+Actions:
+const handleEdit = (operacion)=>{
+ switch(operacion){
+   case EDITAR_ON:
+	objeto.editar = true;
+	return
+  case EDITAR_OFF:
+ 	objeto.editar= false;
+	return;
+  default:
+	break;
+ }
+
+}
+handleEdit(EDITAR_ON)
+handleEdit(EDITAR_OFF)
+
+******************************************************************************
+otro ejemplo:
+let state={
+ usuarios:{
+ 	userName: null,
+	token:null,
+	email:null 
+ },
+ productos:{},
+favoritos:[]
+}
+
+
+

@@ -1,11 +1,11 @@
 import React from 'react'
-import { AiOutlineHeart, AiFillHeart, AiFillDelete } from 'react-icons/ai'
+import { AiOutlineHeart, AiFillHeart, AiFillDelete, AiFillEdit } from 'react-icons/ai'
 
 
 
 
 const Card = (props) => {
-    const { id, name, marca, modelo, precio, isInFavorites, addFavoritos, removeFavoritos, isFavoritos } = props
+    const { id, name, marca, modelo, precio, isInFavorites, addFavoritos, removeFavoritos, isFavoritos, handleEditProductFields } = props
 
     return (
         <div className="card w-75">
@@ -34,6 +34,9 @@ const Card = (props) => {
                 {isFavoritos && (
                     <span onClick={() => removeFavoritos(id)} role={'button'} className='fs-3 text-danger'><AiFillDelete /></span>
                 )}
+                <span className='fs-3'>
+                    <AiFillEdit onClick={()=>handleEditProductFields({id,name, marca, modelo, precio})} />
+                </span>
             </div>
         </div>
     )

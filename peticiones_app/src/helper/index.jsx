@@ -11,3 +11,12 @@ export const defineInputType = (string) => {
             return "text"
     }
 }
+
+export const defineIsDisable=(string )=>{
+    switch (string) {
+        case "id":
+            return true;
+        default:
+            return false;
+    }
+}

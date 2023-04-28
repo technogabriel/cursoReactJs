@@ -4,8 +4,8 @@
       "id": 1,
       "name": "zapatilla",
       "marca": "Nike",
-      "modelo": "Air Jordan",
-      "precio": 12000
+      "modelo": "Air force 1",
+      "precio": "18000"
     },
     {
       "id": 2,
@@ -20,13 +20,6 @@
       "marca": "Puma",
       "modelo": "Classic",
       "precio": 11500
-    },
-    {
-      "nombre": "zapatilla",
-      "marca": "converse",
-      "modelo": "allstar",
-      "precio": "9800",
-      "id": 4
     }
   ],
   "favoritos": []
