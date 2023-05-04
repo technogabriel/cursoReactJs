@@ -1,0 +1,8 @@
+REDUX:
+tecnologia para centralizar los estados. No forma parte de react.
+Para generar redux:
+rx y se puede generar reducers, actions y types
+para ver el store desde el redux devtools agregar al createStore:
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+**no se puede llamar directamente a una acciòn sin el dispatcher
